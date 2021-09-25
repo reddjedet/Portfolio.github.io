@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.25;
+}
+
+body {
+  background: #F1F1F1;
+  font-family: 'Roboto', sans-serif;
+  transition: .3s ease all;
+}
+
+body.dark {
+  background: #111111;
+}
+
+a {
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+nav {
+  background: #FEFEFE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  transition: .3s ease all;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+body.dark nav {
+  background: #222222;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+body.dark nav a {
+  color: #F05033;
+}
+
+body.dark nav a:hover {
+  color: #FEFEFE;
+}
+
+nav .logotipo {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav .logotipo img {
+  width: 6vw;
+}
+
+nav .enlaces {
+  display: flex;
+  align-items: center;
+}
+
+nav .enlaces a {
+  margin-right: 40px;
+}
+
+nav .enlaces a:hover {
+  color: #707070;
+}
+
+.switch {
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: #000;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 40px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 40px 0;
+}
+
+.grid .card {
+  background: #FEFEFE;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  min-height: 195px;
+  margin-top: 50px;
+  transition: .3s ease all;
+}
+
+.grid .card p {
+  position: absolute;
+  z-index: 1;
+  top: -35px;
+  font-weight: 800;
+  color: #3C3C3D;
+  border: 2px solid rgba(26, 26, 26, 0.8);
+  transform: rotate(-15deg);
+  background: rgba(241, 119, 3, 0.6);
+}
+
+body.dark .grid .card {
+  background: #222222;
+  box-shadow: #F05033;
+}
+
+.grid .card img {
+  vertical-align: top;
+  border-radius: 7px;
+  position: absolute;
+  top: -50px;
+  width: calc(100% - 40px);
+  max-height: 165px;
+  object-fit: cover;
+}
+
+.grid .card .botones {
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid .card .botones .boton {
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  display: block;
+  background: #111111;
+  text-align: center;
+  border-radius: 5px;
+  transition: .3s ease all;
+}
+
+.grid .card .botones .boton.primario {
+  background: #D6D1CC;
+}
+
+.grid .card .botones .boton.primario:hover {
+  background: #9E9B98;
+}
+
+.grid .card .botones .boton.secundario {
+  background: #F05033;
+}
+
+.grid .card .botones .boton.secundario:hover {
+  background: #F09033;
+}
+
+.photo-swal {
+  position: relative;
+  left: 3vw;
+  width: 10vw;
+  border-radius: 50%;
+}
+
+.title-swal {
+  position: relative;
+  left: 5.5vw;
+}
+
+.swal2-actions button {
+  position: relative;
+  left: 5vw;
+}
+
+.swal2-footer {
+  position: relative;
+  left: 1vw;
+}
+
+.row {
+  /*     .columnaUno {} */
+}
+
+.row img {
+  box-shadow: inset 0 0 10px #222049;
+}
+
+.row .col {
+  height: 130vh;
+  position: relative;
+  background: #9E9B98;
+  display: inline-flex;
+  margin: 20px 0px;
+  border-radius: 45px;
+  color: #3C3C3D;
+  text-align: center;
+  /*     box-shadow: inset -10px 5px 5px $secundario; */
+  border-bottom-left-radius: 5px;
+  box-shadow: rgba(240, 80, 51, 0.8) 5px 5px, rgba(240, 80, 51, 0.8) 10px 10px, rgba(240, 80, 51, 0.8) 15px 15px, rgba(240, 80, 51, 0.8) 20px 20px, rgba(240, 80, 51, 0.8) 25px 25px;
+}
+
+.row .columnaDos {
+  font-weight: 600;
+  padding-top: 5%;
+}
+
+.row p {
+  position: relative;
+  top: 55px;
+  width: 25vw;
+  color: #111111;
+  font-weight: 600;
+}
+
+.row h4 {
+  display: inline-flex;
+  position: absolute;
+  text-align: center;
+  margin: 10px 100px;
+  color: #F09033;
+  font-weight: 800;
+}
+
+.prebanner {
+  position: relative;
+  z-index: 1;
+}
+
+.octocat {
+  position: absolute;
+  top: 50vh;
+  left: 5vw;
+  opacity: .95;
+}
+
+.fondo {
+  color: #F05033;
+  width: 70%;
+  margin-left: 30%;
+  padding-right: 1%;
+}
+/*# sourceMappingURL=estilos.css.map */
